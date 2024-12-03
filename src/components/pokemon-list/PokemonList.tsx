@@ -41,11 +41,11 @@ const PokemonList: FC = () => {
 
   const renderPokemon = () => {
     // renderPokemon function to loop through the pokemon array and render PokemonCard component
-    return pokemon.map((pokemon: Pokemon) => (
+    return pokemon && pokemon.map((pokemon: Pokemon) => (
       <Col key={pokemon.id} sm={12} md={6} lg={3} className="mb-4">
         <PokemonCard pokemon={pokemon} />
       </Col>
-    ));
+    ))
   };
 
   return (
